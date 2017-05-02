@@ -1,10 +1,9 @@
 class Player
 {
-  constructor(x, y, position, instruction) {
+  constructor(x, y, position) {
     this.x = x;
     this.y = y;
     this.position = position;
-    this.instruction = instruction;
   }
 
   get size() {
@@ -35,5 +34,17 @@ class Player
   drawShape() {
     fill(255);
     ellipse(this.x, this.y, this.size, this.size);
+  }
+
+  performBlock(length, angle) {
+    this.instruction = new Block(this.x, this.y, length, angle);
+  }
+
+  performRoute(length, angle) {
+    this.instruction = new Route(this.x, this.y, length, angle);
+  }
+
+  performRun(length, angle) {
+    this.instruction = new Run(this.x, this.y, length, angle);
   }
 }
