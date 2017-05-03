@@ -24,7 +24,7 @@ function addSkillPlayers() {
   players.push(new Player(centre - 100, pos + 70, "2"));
   players[players.length - 1].performBlock(110, -15);
   players.push(new Player(centre, pos + 150, "3"));
-  players[players.length - 1].performRun(300, -25);
+  RunCreator.Create(players[players.length - 1], 7);
   players.push(new Player(centre + 100, pos + 70, "4"));
   players[players.length - 1].performBlock(110, 15);
 }
