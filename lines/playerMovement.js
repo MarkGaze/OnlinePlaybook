@@ -1,7 +1,7 @@
 class PlayerMovement {
-  constructor(startX, startY, length, angle) {
-    this.startX = startX;
-    this.startY = startY;
+  constructor(x, y, length, angle) {
+    this.x = x;
+    this.y = y;
     this.length = length;
     this.angle = radians(angle);
   }
@@ -14,7 +14,7 @@ class PlayerMovement {
     strokeWeight(3);
     this.setStrokeColor();
     push();
-    translate(this.startX, this.startY);
+    translate(this.x, this.y);
     rotate(this.angle);
     this.drawLines();
     pop();

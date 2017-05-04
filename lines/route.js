@@ -1,7 +1,15 @@
 class Route extends PlayerMovement {
   drawLines () {
-    line(0, 0, 0, -this.length);
-    line(-12, -this.length + 15, 0, -this.length);
-    line(12, -this.length + 15, 0, -this.length);
+    this.drawLine(0, 0, this.length);
+    this.addArrowLines(0, this.length);
+  }
+
+  drawLine(x, y, length) {
+    line(x, y, 0, -length);
+  }
+
+  addArrowLines(x, y) {
+    line(x - 12, -y + 15, x, -y);
+    line(x + 12, -y + 15, x, -y);
   }
 }
