@@ -17,9 +17,9 @@ function setup() {
 
 function addSkillPlayers() {
   players.push(new Player(50, pos, "X"));
-  players[players.length - 1].performRoute(300, 0);
+  PassRouteCreator.Create(players[players.length - 1]);
   players.push(new Player(width - 50, pos, "Y"));
-  players[players.length - 1].performRoute(300, 0);
+  PassRouteCreator.Create(players[players.length - 1]);
   players.push(new Player(centre, pos + 70, "1"));
   players.push(new Player(centre - 100, pos + 70, "2"));
   players[players.length - 1].performBlock(110, -15);

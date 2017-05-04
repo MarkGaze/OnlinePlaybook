@@ -39,12 +39,4 @@ class Player
   performBlock(length, angle) {
     this.instruction = new Block(this.x, this.y, length, angle);
   }
-
-  performRoute(length, angle) {
-    this.instruction = new Route(this.x, this.y, length, angle);
-  }
-
-  performRun(length, angle) {
-    this.instruction = new Run(this.x, this.y, length, angle);
-  }
 }

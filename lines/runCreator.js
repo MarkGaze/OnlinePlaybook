@@ -1,5 +1,5 @@
 class RunCreator {
-  static Create(player, hole, side) {
+  static Create(player, hole) {
     var angle;
     switch (hole) {
       case 1: angle = -10; break;
