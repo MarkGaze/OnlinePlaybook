@@ -11,7 +11,11 @@ class Run extends PlayerMovement {
   drawLines () {
     rotate(this.angle);
     line(0, 0, 0, -this.length);
-    line(-12, -this.length + 15, 0, -this.length);
-    line(12, -this.length + 15, 0, -this.length);
+    this.addArrowLines(0, this.length);
+  }
+
+  addArrowLines(x, y) {
+    line(x - 12, -y + 15, x, -y);
+    line(x + 12, -y + 15, x, -y);
   }
 }
