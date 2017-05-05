@@ -1,9 +1,8 @@
 class PlayerMovement {
-  constructor(x, y, length, angle) {
+  constructor(x, y, length) {
     this.x = x;
     this.y = y;
     this.length = length;
-    this.angle = radians(angle);
   }
 
   setStrokeColor() {
@@ -13,14 +12,10 @@ class PlayerMovement {
   draw() {
     strokeWeight(3);
     this.setStrokeColor();
+
     push();
     translate(this.x, this.y);
-    rotate(this.angle);
     this.drawLines();
     pop();
-  }
-
-  drawLines() {
-
   }
 }
