@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "checkJs": true
+    },
+    "include": [
+        "bower_components"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
