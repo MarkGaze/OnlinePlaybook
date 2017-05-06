@@ -3,18 +3,20 @@ class Route extends PlayerMovement {
     super(x, y, length);
     this.side = side;
   }
+  
   drawLines () {
     this.drawLine(0, 0, this.length);
+    this.drawLine(0, this.length, this.length, 90, true);
   }
 
-  drawLine(x, y, length) {
-    line(x, y, 0, -length);
+  drawLine(x, y, length, angle, last = false) {
     push();
-    translate(x, y - length);
-    var angle = 135 * this.side; 
+    translate(x, -y);
+    angle = angle * this.side; 
     rotate(radians(angle));
-    line(0, 0, 0, -100);
-    this.addArrowLines(0, 100);
+    line(0, 0, 0, -length);
+    if(last)
+	    this.addArrowLines(0, length);
     pop();
   }
 
