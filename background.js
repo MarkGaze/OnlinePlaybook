@@ -1,7 +1,7 @@
 class Background {
   static draw() {
     const yardSize = 25;
-    for (var i = 0; i < height; i += yardSize * 5) {
+    for (var i = height; i > -5 * yardSize; i -= yardSize * 5) {
       stroke(180);
       strokeWeight(3);
       strokeCap(SQUARE);
