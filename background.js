@@ -7,8 +7,8 @@ class Background {
       strokeCap(SQUARE);
       line(0, i, width, i);
       for (var j = 0; j < 5; j++) {
-        line(210, i + (j * yardSize), 230, i + (j * yardSize));
-        line(width - 230, i + (j * yardSize), width - 210, i + (j * yardSize));
+        line(centre - 210, i + (j * yardSize), centre - 230, i + (j * yardSize));
+        line(centre + 230, i + (j * yardSize), centre + 210, i + (j * yardSize));
       }
     }
   }

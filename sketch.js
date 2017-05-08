@@ -1,25 +1,34 @@
 var players = []; 
-var pos = 400;
+var pos = 600;
 var centre;
 var defense;
 
+function preload() {
+  PassRouteCreator.LoadRoutes();
+}
+
 function setup() {
-  console.log("Started");
-  createCanvas(800, 600);
+  noLoop();
+
+  createCanvas(1200, 800);
   pixelDensity(2);
 
   centre = width / 2;
   
+  addPlayers();
+}
+
+function addPlayers() {
   addOffensiveLine();
   addSkillPlayers();
   addDefense();
 }
 
 function addSkillPlayers() {
-  players.push(new Player(50, pos, "X"));
-  PassRouteCreator.Create(players[players.length - 1]);
-  players.push(new Player(width - 50, pos, "Y"));
-  PassRouteCreator.Create(players[players.length - 1]);
+  players.push(new Player(250, pos, "X"));
+  PassRouteCreator.Create(players[players.length - 1], "hookout");
+  players.push(new Player(width - 250, pos, "Y"));
+  PassRouteCreator.Create(players[players.length - 1], "post");
   players.push(new Player(centre, pos + 70, "1"));
   players.push(new Player(centre - 100, pos + 70, "2"));
   players[players.length - 1].performBlock(110, -15);
@@ -42,8 +51,10 @@ function addDefense() {
 }
 
 function draw() {
+  background(255);
+
   Background.draw();
-  
+
   for(var i = 0; i < defense.players.length; i++) {
     defense.players[i].draw();
   }

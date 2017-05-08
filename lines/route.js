@@ -1,12 +1,19 @@
 class Route extends PlayerMovement {
-  constructor(x, y, length, side) {
-    super(x, y, length);
+  constructor(x, y, definition, side) {
+    super(x, y);
+    this.definition = definition;
     this.side = side;
   }
   
   drawLines () {
-    this.drawLine(0, 0, this.length);
-    this.drawLine(0, this.length, this.length, 90, true);
+    var x = 0;
+    var y = 0;
+    for (var i = 0; i < this.definition.length; i++) {
+      var line = this.definition[i];
+      var last = (i == this.definition.length - 1);
+      this.drawLine(x, y, line.distance, line.angle, last);
+      y = line.distance - 1;
+    }
   }
 
   drawLine(x, y, length, angle, last = false) {
