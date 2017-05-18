@@ -29,7 +29,7 @@ class Route extends PlayerMovement {
   }
 
   addArrowLines(x, y) {
-    line(x - 12, -y + 15, x, -y);
-    line(x + 12, -y + 15, x, -y);
+    line(x - 12, -y + 15, x + 0.75, -y);
+    line(x + 12, -y + 15, x - 0.75, -y);
   }
 }
