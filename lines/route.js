@@ -11,8 +11,9 @@ class Route extends PlayerMovement {
     for (var i = 0; i < this.definition.length; i++) {
       var line = this.definition[i];
       var last = (i == this.definition.length - 1);
-      this.drawLine(x, y, line.distance, line.angle, last);
-      y = line.distance - 1;
+      var distance = line.distance * YardSize;
+      this.drawLine(x, y, distance, line.angle, last);
+      y = distance - 1;
     }
   }
 

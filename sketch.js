@@ -1,5 +1,7 @@
+const YardSize = 25;
+
 var players = []; 
-var pos = 600;
+var pos = 565;
 var centre;
 var defense;
 
