@@ -28,9 +28,9 @@ function addPlayers() {
 
 function addSkillPlayers() {
   players.push(new Player(250, pos, "X"));
-  PassRouteCreator.Create(players[players.length - 1], "hookout");
+  PassRouteCreator.Create(players[players.length - 1], "slant");
   players.push(new Player(width - 250, pos, "Y"));
-  PassRouteCreator.Create(players[players.length - 1], "post");
+  PassRouteCreator.Create(players[players.length - 1], "slant");
   players.push(new Player(centre, pos + 70, "1"));
   players.push(new Player(centre - 100, pos + 70, "2"));
   players[players.length - 1].performBlock(110, -15);

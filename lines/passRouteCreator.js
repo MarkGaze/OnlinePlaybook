@@ -28,7 +28,7 @@ class PassRouteCreator {
           "distance": 2
         },
         {
-          "distance": 20,
+          "distance": 10,
           "angle": 45
         }]
       },
@@ -38,7 +38,7 @@ class PassRouteCreator {
           "distance": 2
         },
         {
-          "distance": 20,
+          "distance": 10,
           "angle": -45
         }]
       },
