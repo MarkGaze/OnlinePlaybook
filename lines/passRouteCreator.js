@@ -19,7 +19,7 @@ class PassRouteCreator {
     data = [{
         "name": "fade",
         "definition": [{
-          "distance": 20
+          "distance": 12
         }]
       },
       {
@@ -77,6 +77,26 @@ class PassRouteCreator {
         {
           "distance": 10,
           "angle": 45
+        }]
+      },
+      {
+        "name": "in",
+        "definition": [{
+          "distance": 5
+        },
+        {
+          "distance": 5,
+          "angle": 90
+        }]
+      },
+      {
+        "name": "out",
+        "definition": [{
+          "distance": 5
+        },
+        {
+          "distance": 5,
+          "angle": -90
         }]
       }
     ];
