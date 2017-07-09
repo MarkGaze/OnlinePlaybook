@@ -1,7 +1,7 @@
 const YardSize = 25;
 
 var players = []; 
-var pos = 565;
+var pos;
 var centre;
 var defense;
 
@@ -15,6 +15,7 @@ function setup() {
   createCanvas(1200, 800);
   pixelDensity(2);
 
+  pos = height - (10 * YardSize);
   centre = width / 2;
   
   addPlayers();
@@ -27,9 +28,9 @@ function addPlayers() {
 }
 
 function addSkillPlayers() {
-  players.push(new Player(250, pos, "X"));
+  players.push(new Player(10 * YardSize, pos, "X"));
   PassRouteCreator.Create(players[players.length - 1], "slant");
-  players.push(new Player(width - 250, pos, "Y"));
+  players.push(new Player(width - (10 * YardSize), pos, "Y"));
   PassRouteCreator.Create(players[players.length - 1], "slant");
   players.push(new Player(centre, pos + 70, "1"));
   players.push(new Player(centre - 100, pos + 70, "2"));

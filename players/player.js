@@ -2,7 +2,7 @@ class Player
 {
   constructor(x, y, position) {
     this.x = x;
-    this.y = y;
+    this.y = y + (this.size / 2);
     this.position = position;
   }
 
